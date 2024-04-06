@@ -10,3 +10,4 @@ keras
 xgboost
 mlxtend
 graphviz
+flask
