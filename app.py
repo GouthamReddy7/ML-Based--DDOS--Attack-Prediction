@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import joblib
 import numpy as np
 
-app = Flask(_name_, template_folder='templates')
+app = Flask(__name__, template_folder='templates')
 
 # Load the saved models
 Deep_Neural_Network_model=joblib.load("dnn_model.pkl")
@@ -50,5 +50,5 @@ def make_prediction(input_data, model):
         print(ValueError)
         return None
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True,host="0.0.0.0")
